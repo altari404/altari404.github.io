@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>✶ ALTARI404 ✶</title>
+  <title>✶ ANTAGONIZE ME ✶</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<!-- 
+  <div class="blob-bottom">
+    <img src="firko.gif" alt="bottom blob gif">
+  </div> -->
+
   <div class="outer-window">
     <div class="browser-bar">
-      <span class="url">https://altari404.github.io/</span>
+      <span class="url">https://antagonize.me/main</span>
     </div>
 
     <div class="inner-content">
@@ -23,7 +28,7 @@
         <img src="lmao.jpg" alt="Scene pic" class="scene-pic">
         <div class="info-box">
           <p><strong>404RUNWAY</strong><br>only4 coolest ppl<br>Online, USA</p>
-          <p>Next Login: 07/23/2025</p>
+          <p>Last Login: 07/23/2020</p>
         </div>
         <div class="music-player">
           <p>Now Playing: <strong>sugarcrash - elyotto</strong></p>
@@ -50,6 +55,133 @@
       </div>
     </div>
   </div>
+  <div class="outer-window window-2">
+  <div class="browser-bar">
+    <span class="url">https://antagonize.me/notes</span>
+  </div>
+
+  <div class="inner-content">
+    <div>
+      <div class="info-box">
+          <p>✨ WHO TF EVEN ARE WE?!</p>
+          <p>i forgot (ps try dragging and double clicking the top bars)</p>
+      </div>
+      <div class="info-box">
+        <p>eloni</p>
+      </div>
+    </div>
+    <div class="info-box">
+      <p>things i want tuh do:</p>
+      <ul>
+        <li>1. screaming match</li>
+        <li>2. paper airplane throwing contest</li>
+        <li>4. pickle eating contest</li>
+
+      </ul>
+
+    </div>
+   
+    <!-- <div class="info-box">
+      <div class="graphic">
+        <img src="hyprpopup.gif" alt="hpyrpopcat" />
+      </div>
+    </div> -->
+  </div>
+</div>
+
+  <div class="outer-window window-3">
+  <div class="browser-bar">
+    <span class="url">https://antagonize.me/details</span>
+  </div>
+
+  <div class="inner-content">
+    <div class="flexthis">
+      <div class="info-box">
+        <h1>paper airplane throwing contest</h1>
+        <ul>
+          <li>Jul 21st</li>
+          <li>bring as many people as possible</li>
+          <li>on top of parking garage</li>
+        </ul>
+      </div>
+    </div>
+   
+    <!-- <div class="info-box">
+      <div class="graphic">
+        <img src="hyprpopup.gif" alt="hpyrpopcat" />
+      </div>
+    </div> -->
+  </div>
+</div>
+<script>
+  const windows = document.querySelectorAll('.outer-window');
+  let zCounter = 1000;
+
+  windows.forEach((win) => {
+    const bar = win.querySelector('.browser-bar');
+    const content = win.querySelector('.inner-content');
+
+    let isDragging = false;
+    let offsetX = 0;
+    let offsetY = 0;
+    let isMinimized = false;
+
+    bar.addEventListener('mousedown', (e) => {
+      if (e.detail === 2) return;
+
+      isDragging = true;
+      const rect = win.getBoundingClientRect();
+      offsetX = e.clientX - rect.left;
+      offsetY = e.clientY - rect.top;
+
+      // bring to front
+      zCounter++;
+      win.style.zIndex = zCounter;
+      win.classList.add('dragging');
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        const winWidth = win.offsetWidth;
+        const winHeight = win.offsetHeight;
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        let left = e.clientX - offsetX;
+        let top = e.clientY - offsetY;
+
+        left = Math.max(0, Math.min(screenWidth - winWidth, left));
+        top = Math.max(0, Math.min(screenHeight - 40, top));
+
+        win.style.left = `${left}px`;
+        win.style.top = `${top}px`;
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      if (isDragging) {
+        isDragging = false;
+        win.classList.remove('dragging');
+      }
+    });
+
+    bar.addEventListener('dblclick', () => {
+      if (!isMinimized) {
+        content.style.display = 'none';
+        isMinimized = true;
+      } else {
+        content.style.display = 'flex';
+        isMinimized = false;
+      }
+    });
+
+    win.style.position = 'absolute';
+    const centerX = (window.innerWidth - win.offsetWidth) / 2;
+    const centerY = (window.innerHeight - win.offsetHeight) / 2;
+    win.style.left = `${centerX + Math.random() * 40 - 20}px`;
+    win.style.top = `${centerY + Math.random() * 40 - 20}px`;
+  });
+</script>
 
 
 
