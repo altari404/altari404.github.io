@@ -40,7 +40,7 @@ body {
 .inner-content {
   position: relative;
   display: flex;
-/*   background: url('https://i.imgur.com/TclDABF.png') repeat; */
+  /* background: url('https://i.imgur.com/TclDABF.png') repeat; */
   padding: 20px;
   z-index: 1;
 }
@@ -346,4 +346,31 @@ body {
   .window-2, .window-3 {
     max-width: 100% !important;
   }
+}
+
+.outer-window {
+  transform: scale(0.8);
+  transform-origin: top left;
+}
+
+
+@media (max-width: 768px) {
+  .zoom-wrapper {
+    transform: none;
+  }
+  .outer-window {
+  transform: scale(none);
+  transform-origin: top left;
+}
+}
+.bg-main {
+  background-image: url('artry.png');
+}
+
+.bg-notes {
+  background-image: url('redone.png');
+}
+
+.bg-details {
+  background-image: url('hrent.jpg');
 }
