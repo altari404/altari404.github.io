@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg, #ff00cc, #3333ff);
+  text-align: center;
+  padding: 0 2em;
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 0 0 15px #ff00ff;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  margin-top: 1em;
+  letter-spacing: 2px;
+  color: #ddd;
+}
+
+.cta {
+  margin-top: 2em;
+  padding: 0.75em 2em;
+  border: 2px solid #fff;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.cta:hover {
+  background: #fff;
+  color: #000;
+}
+
+.info {
+  padding: 4em 2em;
+  background: #111;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.info h2 {
+  text-transform: uppercase;
+  margin-top: 2em;
+  color: #ff66ff;
+}
+
+ul {
+  list-style: square;
+}
+
+#rsvp {
+  background: #222;
+  padding: 3em 2em;
+  text-align: center;
+}
+
+footer {
+  padding: 2em;
+  background: #000;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+}
