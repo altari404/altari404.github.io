@@ -99,13 +99,13 @@ body {
   display: block;
   width: fit-content;
 }
-
+/* 
 .retro-button:hover {
   background: linear-gradient(145deg, #1a1a1a, #333);
   color: #ffccff;
   box-shadow: 0 0 15px #ff00ff, inset 0 0 10px #ff66cc;
   transform: scale(1.05);
-}
+} */
 
 .crack-overlay {
   position: fixed;
