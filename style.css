@@ -40,7 +40,7 @@ body {
 .inner-content {
   position: relative;
   display: flex;
-  background: url('https://i.imgur.com/TclDABF.png') repeat;
+/*   background: url('https://i.imgur.com/TclDABF.png') repeat; */
   padding: 20px;
   z-index: 1;
 }
