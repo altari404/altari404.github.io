@@ -6,13 +6,30 @@
   <title>✶ heylol ✶</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✶ antagonize.me ✶</title>
+  <meta name="description" content="the ONLY scene that EVER mattered!">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://antagonize.me/">
+  <meta property="og:title" content="✶ antagonize.me ✶ — heylol">
+  <meta property="og:description" content="the ONLY scene that EVER mattered!">
+  <meta property="og:image" content="https://antagonize.me/embed.png"> 
+
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:url" content="https://antagonize.me/">
+  <meta name="twitter:title" content="✶ antagonize.me ✶ — heylol">
+  <meta name="twitter:description" content="the ONLY scene that EVER mattered!">
+  <meta name="twitter:image" content="https://antagonize.me/embed.png">
+
+  <meta name="apple-mobile-web-app-title" content="✶ antagonize.me ✶">
+
+
 </head>
 <body>
 
-<!-- 
-  <div class="blob-bottom">
-    <img src="firko.gif" alt="bottom blob gif">
-  </div> -->
 
   <div class="outer-window">
     <div class="browser-bar">
@@ -151,7 +168,7 @@
         let left = e.clientX - offsetX;
         let top = e.clientY - offsetY;
 
-        left = Math.max(0, Math.min(screenWidth - winWidth, left));
+        left = Math.max(-winWidth * 0.8, Math.min(screenWidth - winWidth * 0.2, left));
         top = Math.max(0, Math.min(screenHeight - 40, top));
 
         win.style.left = `${left}px`;
